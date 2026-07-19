@@ -85,16 +85,16 @@ export default function Skills() {
             <div className="grid grid-cols-3 gap-3">
               {items.map(({ name, logo }) => (
                 <div key={name} className="flex flex-col items-center gap-1.5">
-                  <div className="w-16 h-16 bg-slate-800/70 rounded-lg flex items-center justify-center transition-transform duration-200 hover:scale-110 hover:bg-slate-800">
+                  <div className="flex flex-col items-center gap-1.5">
                     <img
                       src={logo}
                       alt={name}
-                      className="w-9 h-9 object-contain"
+                      className="w-16 h-16 object-contain transition-transform duration-200 hover:scale-110"
                     />
+                    <span className="text-[11px] text-slate-500 text-center leading-tight">
+                      {name}
+                    </span>
                   </div>
-                  <span className="text-[11px] text-slate-500 text-center leading-tight">
-                    {name}
-                  </span>
                 </div>
               ))}
             </div>
